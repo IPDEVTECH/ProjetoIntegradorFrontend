@@ -25,6 +25,19 @@ export interface ResponseHttpRequest<T> {
 }
 
 export interface Credential {
-    login: string,
+    email: string,
     password: string,
+}
+
+export interface Paginate<T> {
+    items: T[],
+    totalItems: number,
+    perPage: number,
+    currentPage: number,
+    lastPage: number,
+}
+
+export interface ListGroup<T = any> {
+    group: string | number,
+    itens: T[],
 }
