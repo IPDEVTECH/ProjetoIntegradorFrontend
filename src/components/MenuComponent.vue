@@ -5,9 +5,9 @@
                 <img src="../../src/assets/logo.png" alt="">
             </div>
             <div class="links">
-                <li><a id="dashboard_btn"><i class='bx bxs-dashboard'></i></a></li>
-                <li><a id="mesas_btn"><i class='bx bx-table'></i></a></li>
-                <li><a id="cardapio_btn"><i class='bx bxs-receipt'></i></a></li>
+                <li><a id="dashboard_btn" href="/dashboard"><i class='bx bxs-dashboard'></i></a></li>
+                <li><a id="mesas_btn" href="/mesas"><i class='bx bx-table'></i></a></li>
+                <li><a id="cardapio_btn" href="/cardapio"><i class='bx bxs-receipt'></i></a></li>
                 <li><a><i class='bx bxs-timer'></i></a></li>
             </div>
         </div>
