@@ -1,15 +1,17 @@
 <template>
     <v-app>
-        <h1>Cardápio</h1>
-        <div class="cardapio-itens">
-            <div class="item-cardapio" v-for="(produto, index) in produtos" :key="index">
-                <a class="cardapio_modal">
-                    <div class="img"></div>
-                </a>
-            </div>
+        <div class="cardapio_main">
+            <h1>Cardápio</h1>
+            <div class="cardapio-itens">
+                <div class="item-cardapio" v-for="(produto, index) in produtos" :key="index">
+                    <a class="cardapio_modal">
+                        <div class="img"></div>
+                    </a>
+                </div>
 
-            <div class="adicionar-item item-cardapio" @click="adicionarProduto">
-                <i class='bx bx-plus'></i>
+                <div class="adicionar-item item-cardapio" @click="adicionarProduto">
+                    <i class='bx bx-plus'></i>
+                </div>
             </div>
         </div>
     </v-app>
@@ -42,7 +44,12 @@ export default class Cardapio extends Vue {
   
 <style scoped>
 /* CARDAPIO */
-
+.cardapio_main{
+    padding: 2rem;
+    font-family: "Ubuntu";
+    background-color: rgb(212 226 255);
+    height: 100%;
+}
 .opcao-cardapio {
     margin-top: 1rem;
 }
