@@ -48,6 +48,8 @@ export default class Mesas extends Vue {
 .mesas {
     padding: 2rem;
     font-family: "Ubuntu";
+    background-color: rgb(212 226 255);
+    height: 100%;
 }
 
 .mesa {
