@@ -10,7 +10,7 @@ class AuthService {
     }
 
     public login(credential: Credential): HttpRequestPromise<AuthDataResponse> {
-        return http.post('auth/login-area-administrativa', credential)
+        return http.post('login-area-administrativa', credential)
     }
 }
 

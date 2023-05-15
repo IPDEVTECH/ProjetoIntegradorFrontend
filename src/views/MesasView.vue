@@ -10,7 +10,7 @@
   </template>
   
   <script lang="ts">
-  import {Component, Ref, Vue} from 'vue-property-decorator'
+  import {Component, Vue} from 'vue-property-decorator'
   import Mesas from '@/components/Mesas.vue';
   import MenuComponent from '@/components/MenuComponent.vue';
   

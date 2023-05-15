@@ -9,7 +9,7 @@ export interface HttpRequestPromise<T = any> extends AxiosPromise<T> {
 }
 
 class HttpRequest {
-    private axios: AxiosInstance
+    private readonly axios: AxiosInstance
     private defaultErrorHandler: (error: any, context: any) => any
 
     constructor() {
