@@ -5,6 +5,7 @@ import HomeView from "@/views/HomeView.vue";
 import DashboardView from "@/views/DashboardView.vue";
 import MesasView from "@/views/MesasView.vue";
 import CardapioView from "@/views/CardapioView.vue";
+import PedidosView from "@/views/PedidosView.vue";
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes: Array<RouteConfig> = [
     path: '/cardapio',
     name: 'cardapio',
     component: CardapioView
+  },
+  {
+    path: '/pedidos',
+    name: 'pedidos',
+    component: PedidosView
   },
   {
     path: '/',
