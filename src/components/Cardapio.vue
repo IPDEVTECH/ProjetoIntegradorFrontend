@@ -18,7 +18,7 @@
 </template>
   
 <script lang="ts">
-import { Component, Ref, Vue } from 'vue-property-decorator'
+import { Component, Vue } from 'vue-property-decorator'
 
 @Component({
     components: {},

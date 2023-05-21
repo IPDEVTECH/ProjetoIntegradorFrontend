@@ -1,48 +1,44 @@
 <template>
-    <v-main style="background-color: floralwhite;">
-        <v-container>
-            <v-layout align-center justify-center>
-                <v-flex xs12 sm8 md4>
-                    <v-card class="elevation-12">
-                        <v-toolbar dark style="background-color: darkred;">
-                            <v-toolbar-title>Login Administrativo</v-toolbar-title>
-                        </v-toolbar>
-                        <v-card-text>
-                            <v-form ref="form">
-                                <v-text-field
-                                    v-model="credential.email"
-                                    :rules="rules.email"
-                                    outlined
-                                    id="email"
-                                    name="email"
-                                    label="E-mail"
-                                    type="text"
-                                ></v-text-field>
-                                <v-text-field
-                                    v-model="credential.password"
-                                    :rules="rules.password"
-                                    outlined
-                                    id="password"
-                                    name="password"
-                                    label="Password"
-                                    type="password"
-                                ></v-text-field>
-                            </v-form>
-                        </v-card-text>
-                        <v-card-actions>
-                            <v-spacer></v-spacer>
-                            <v-btn dark style="background-color: darkred;"
-                                   type="submit"
-                                   :loading="loading"
-                                   :disabled="loading"
-                                   v-on:click="authentication">Login
-                            </v-btn>
-                        </v-card-actions>
-                    </v-card>
-                </v-flex>
-            </v-layout>
-        </v-container>
-    </v-main>
+    <v-layout align-center justify-center class="mt-5">
+        <v-flex xs12 sm8 md4>
+            <v-card class="elevation-12">
+                <v-toolbar dark style="background-color: darkred;">
+                    <v-toolbar-title>Login Administrativo</v-toolbar-title>
+                </v-toolbar>
+                <v-card-text>
+                    <v-form ref="form">
+                        <v-text-field
+                            v-model="credential.email"
+                            :rules="rules.email"
+                            outlined
+                            id="email"
+                            name="email"
+                            label="E-mail"
+                            type="text"
+                        ></v-text-field>
+                        <v-text-field
+                            v-model="credential.password"
+                            :rules="rules.password"
+                            outlined
+                            id="password"
+                            name="password"
+                            label="Password"
+                            type="password"
+                        ></v-text-field>
+                    </v-form>
+                </v-card-text>
+                <v-card-actions>
+                    <v-spacer></v-spacer>
+                    <v-btn dark style="background-color: darkred;"
+                           type="submit"
+                           :loading="loading"
+                           :disabled="loading"
+                           v-on:click="authentication">Login
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-flex>
+    </v-layout>
 </template>
 
 <script lang="ts">
@@ -94,6 +90,7 @@ export default class LoginView extends Vue {
                 token_type: response.data.token_type
             }
             CommonModule.setAuth(authData)
+
             this.$router.push({name: 'about'})
             this.$toast.success('Login realizado com sucesso!', {
                 position: POSITION.TOP_RIGHT,
