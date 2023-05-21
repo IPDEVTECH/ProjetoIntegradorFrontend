@@ -10,17 +10,20 @@
 </template> 
 
 <script lang="ts">
-import {Component, Ref, Vue} from 'vue-property-decorator'
+import {Component, Vue} from 'vue-property-decorator'
 import CardDashboard from '@/components/CardDashboard.vue';
 import MenuComponent from '@/components/MenuComponent.vue';
+import Toast from 'vue-toastification'
+import 'vue-toastification/dist/index.css';
 
 @Component({
     components: {
         CardDashboard,
+        Toast,
         MenuComponent
     },
 })
-export default class DashboardView extends Vue {
+export default class AboutView extends Vue {
 
 }
 </script>
@@ -36,23 +39,4 @@ export default class DashboardView extends Vue {
   background-color: #c2d9eb;
   z-index: 0;
 }
-
 </style>
-    <div class="about">
-
-    </div>
-</template>
-<script lang="ts">
-import {Component, Vue} from 'vue-property-decorator'
-import Toast from 'vue-toastification'
-import 'vue-toastification/dist/index.css';
-
-@Component({
-    components: {
-        Toast
-    },
-})
-export default class AboutView extends Vue {
-
-}
-</script>
